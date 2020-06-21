@@ -25,6 +25,6 @@ data_item['sasl']['saslprofile']['username']=username
 data_item['sasl']['saslprofile']['password']=password
 
 print(data_item['zookeeper']['servers'])
-
+print(data_item)
 with open('burrow.toml', 'w') as outfile:
     toml.dump(data_item, outfile)

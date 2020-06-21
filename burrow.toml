@@ -2,9 +2,9 @@
 pidfile="burrow.pid"
 access-control-allow-origin="*"
 
-#[logging]
-#filename="logs/burrow.log"
-#level="info"
+[logging]
+filename="logs/burrow.log"
+level="debug"
 #maxsize=100
 #maxbackups=30
 #maxage=10
