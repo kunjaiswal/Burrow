@@ -27,6 +27,7 @@ RUN go get -u github.com/golang/dep/cmd/dep
 RUN go get -u github.com/kunjaiswal/Burrow
 RUN cd $GOPATH/src/github.com/kunjaiswal/Burrow && \
 	dep ensure && \
+               	dep init  && \
 	go build
 RUN cd $GOPATH/src/github.com/kunjaiswal/Burrow && \
     mv Burrow $GOPATH/src/
