@@ -2,14 +2,14 @@
 pidfile="burrow.pid"
 access-control-allow-origin="*"
 
-[logging]
-filename="logs/burrow.log"
-level="info"
-maxsize=100
-maxbackups=30
-maxage=10
-use-localtime=false
-use-compression=true
+#[logging]
+#filename="logs/burrow.log"
+#level="info"
+#maxsize=100
+#maxbackups=30
+#maxage=10
+#use-localtime=false
+#use-compression=true
 
 [client-profile.test]
 client-id="burrow-test"
@@ -58,7 +58,6 @@ intervals=10
 expire-group=604800
 zookeeper-interval=60
 zk-group-refresh=300
-
 
 
 [notifier.default]

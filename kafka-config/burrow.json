@@ -1,0 +1,104 @@
+{
+    "general": {
+      "pidfile": "burrow.pid",
+      "access-control-allow-origin": "*"
+    },
+    "logging": {
+      "filename": "logs/burrow.log",
+      "level": "debug"
+    },
+    "client-profile": {
+      "test": {
+        "client-id": "burrow-test",
+        "kafka-version": "2.1.0",
+        "tls": "tlsprofile",
+        "sasl": "saslprofile"
+      }
+    },
+    "zookeeper": {
+      "servers": [
+        "10.254.20.10:2181",
+        "10.254.20.11:2181",
+        "10.254.20.12:2181"
+      ]
+    },
+    "tls": {
+      "tlsprofile": {
+        "cafile": "rootCA.crt",
+        "noverify": true
+      }
+    },
+    "sasl": {
+      "saslprofile": {
+        "username": "sbss_siuwgdumijit3gazngt9mve1c3mzml9ut1gerje7lcp_aioe6m4ktlqcfy2-2ork5cu",
+        "password": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4ZGZmNTI4Mi1lZTJhLTRmMDMtOTc3Mi03NmQ5YjQ2YzE1MTUiLCJpYXQiOjE1NTc0NjY0MTUsImV4cCI6MTU2NTI0MjQxNSwiYXVkIjoiYzlmZWZhZTYtYjlmYy00MGY3LTgxMDMtNWI5OTVlZWUzYmQ3Iiwic3ViIjoic2Jzc19zaXV3Z2R1bWlqaXQzZ2F6bmd0OW12ZTFjM216bWw5dXQxZ2VyamU3bGNwX2Fpb2U2bTRrdGxxY2Z5Mi0yb3JrNWN1PSIsImlzcyI6Imh0dHBzOi8va2Fma2Etc2VydmljZS1vYXV0aC5jZi5zYXAuaGFuYS5vbmRlbWFuZC5jb20iLCJzY29wZSI6WyJrYWZrYS5ub25lIl19.UqcdYKTKFwuRXerwTKzae1efNkEYqMnujLNbpj3E6LQLUxqqN6l4-eSoKry0ZOJXKRnbWVeTwV59mZ3w7V0eFmF98NXBQZQmbmPT64ah42uFcdKTcMl02dUwvpeokRe8zaRV2N76ct7FnK3-GQlPV55p0nbsBpd2bLhmU20y9bWk2VumWMoOFIt7s_AZV467dxUzbtH2PimcrTk_tfoO18YjLNjOstEIDOdfIUQBmfl_yeboPSsuUoUKW20WhlInmJzHki4hfWNhiUEmJOvZAsQmjOCbEjWJVMPWLYTiS6qA83wl4_oL18qrBShBR7CB14j6z7GoaqbykQ8PGWu1yg",
+        "handshake-first": true
+      }
+    },
+    "cluster": {
+      "local": {
+        "class-name": "kafka",
+        "servers": [
+          "10.254.20.21:9093",
+          "10.254.20.22:9093",
+          "10.254.20.23:9093"
+        ],
+        "client-profile": "test"
+      }
+    },
+    "consumer": {
+      "local": {
+        "class-name": "kafka",
+        "cluster": "local",
+        "servers": [
+          "10.254.20.21:9093",
+          "10.254.20.22:9093",
+          "10.254.20.23:9093"
+        ],
+        "client-profile": "test",
+        "group-blacklist": "^(console-consumer-|python-kafka-consumer-|quick-).*$",
+        "group-whitelist": ""
+      }
+    },
+    "httpserver": {
+      "default": {
+        "address": ":8000"
+      }
+    },
+    "storage": {
+      "default": {
+        "class-name": "inmemory",
+        "workers": 20,
+        "intervals": 15,
+        "expire-group": 604800,
+        "min-distance": 1
+      }
+    },
+  "lagcheck " : {
+    "intervals" :10,
+    "expire-group": 604800,
+    "zookeeper-interval":60,
+    "zk-group-refresh" :300
+
+  },
+  "notifier" :{
+    "gemail" :{
+      "class-name" : "email",
+      "interval" :60,
+      "threshold" : 2,
+      "template-open" : "default-email.tmpl",
+      "template-close" :"default-email.tmpl",
+      "server" : "smtp.gmail.com",
+      "port" : 587,
+      "auth-type": "plain",
+      "from" : "kunal.jaiswal.sap@gmail.com",
+      "to" :"kunal.jaiswal.sap@gmail.com",
+      "username" : "kunal.jaiswal.sap@gmail.com",
+      "password" :"Zaq12wsxcde3",
+
+      "send-close" : true,
+      "group-whitelist " :".*commit-stage.*",
+      "noverify" : true
+    }
+  }
+  }
