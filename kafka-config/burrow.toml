@@ -18,7 +18,7 @@ tls="tlsprofile"
 sasl="saslprofile"
 
 [zookeeper]
-servers=[ "10.254.20.10:2181", "10.254.20.11:2181", "10.254.20.12:2181" ]
+servers=[ "localhost:2181" ]
 
 [tls.tlsprofile]
 cafile="rootCA.crt"
@@ -31,13 +31,13 @@ handshake-first=true
 
 [cluster.local]
 class-name="kafka"
-servers=[ "10.254.20.21:9093", "10.254.20.22:9093", "10.254.20.23:9093" ]
+servers=[ "localhost:9093" ]
 client-profile="test"
 
 [consumer.local]
 class-name="kafka"
 cluster="local"
-servers=[ "10.254.20.21:9093", "10.254.20.22:9093", "10.254.20.23:9093" ]
+servers=[ "localhost:9093" ]
 client-profile="test"
 group-blacklist="^(console-consumer-|python-kafka-consumer-|quick-).*$"
 group-whitelist=""
@@ -71,7 +71,6 @@ port =587
 from= "kunal.jaiswal.sap@gmail.com"
 to ="kunal.jaiswal@sap.com"
 username = "kunal.jaiswal.sap@gmail.com"
-password ="Zaq12wsxcde3"
 send-close= true
 auth-type="plain"
 group-whitelist=".*commit-stage.*"

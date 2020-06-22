@@ -72,7 +72,6 @@ port =587
 from= "kunal.jaiswal.sap@gmail.com"
 to ="kunal.jaiswal@sap.com"
 username = "kunal.jaiswal.sap@gmail.com"
-password ="Zaq12wsxcde3"
 send-close= true
 auth-type="plain"
 group-whitelist=".*commit-stage.*"
