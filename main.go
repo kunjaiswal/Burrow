@@ -50,9 +50,7 @@ import (
 
 // exitCode wraps a return value for the application
 type exitCode struct{ Code int }
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World!")
-}
+ 
 func handleExit() {
 	if e := recover(); e != nil {
 			fmt.Println("error is", e)
