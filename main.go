@@ -43,23 +43,25 @@ import (
 	"time"
 
 	"github.com/spf13/viper"
-    "io/ioutil"
+	"io/ioutil"
 	"net/http"
+
 	"github.com/linkedin/Burrow/core"
 )
 
 // exitCode wraps a return value for the application
 type exitCode struct{ Code int }
- 
+
+
 func handleExit() {
 	if e := recover(); e != nil {
-			fmt.Println("error is", e)
-    		b, err := ioutil.ReadFile("logs/burrow.log")
-    		if err != nil {
-    			fmt.Print(err)
-    		}
-    		logs1 := string(b)
-    		fmt.Println(logs1)
+		fmt.Println("error is", e)
+		b, err := ioutil.ReadFile("logs/burrow.log")
+		if err != nil {
+			fmt.Print(err)
+		}
+		logs1 := string(b)
+		fmt.Println(logs1)
 		if exit, ok := e.(exitCode); ok {
 			if exit.Code != 0 {
 				fmt.Fprintln(os.Stderr, "Burrow failed at", time.Now().Format("January 2, 2006 at 3:04pm (MST)"))
@@ -76,17 +78,17 @@ func handleExit() {
 func main() {
 	// This makes sure that we panic and run defers correctly
 	defer handleExit()
-	port := os.Getenv("PORT")
+	/*port := os.Getenv("PORT")
 	if len(port) < 1 {
 		port = "8080"
 	}
-
 	http.HandleFunc("/", handler)
 	fmt.Println("Listening on port", port)
 	http.ListenAndServe(":"+port, nil)
 	for true {
 		time.Sleep(100)
-	}
+	}*/
+
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	// The only command line arg is the config file
@@ -107,9 +109,10 @@ func main() {
 	viper.SetDefault("general.env-var-prefix", "burrow")
 	envPrefix := viper.GetString("general.env-var-prefix")
 	viper.SetEnvPrefix(envPrefix)
-	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))
+	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	viper.AutomaticEnv()
-    fmt.Println("check 1")
+
+	fmt.Println("check 1")
 	// Create the PID file to lock out other processes
 	viper.SetDefault("general.pidfile", "burrow.pid")
 	pidFile := viper.GetString("general.pidfile")
@@ -122,8 +125,8 @@ func main() {
 
 	// Set up stderr/stdout to go to a separate log file, if enabled
 	stdoutLogfile := viper.GetString("general.stdout-logfile")
-		uname := viper.Get("sasl.saslprofile.username")
-    	fmt.Println("check 2", uname)
+	uname := viper.Get("sasl.saslprofile.username")
+	fmt.Println("check 2", uname)
 	if stdoutLogfile != "" {
 		core.OpenOutLog(stdoutLogfile)
 	}
@@ -134,4 +137,5 @@ func main() {
 
 	// This triggers handleExit (after other defers), which will then call os.Exit properly
 	panic(exitCode{core.Start(nil, exitChannel)})
+
 }
