@@ -1,41 +1,22 @@
+FROM golang:1.11-alpine as builder
 
-#this Dockerfile needs to be in folder where Burrow is present 
-#->Burrow
-#->Dockerfile
-FROM golang:1.14-alpine
-MAINTAINER vishwanath.kulkarni@sap.com
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip 
-RUN apt-get install -y nano iputils-ping telnet curl vim jq 
-RUN apt-get update -y
-RUN apt-get install -y curl software-properties-common 
-RUN curl -sL https://deb.nodesource.com/setup_10.x |   bash -
-RUN apt-get install -y wget
-RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key |  apt-key add -
-RUN echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-RUN apt-get update -y
-RUN apt-get install -y cf-cli
-RUN apt-get install -y net-tools
-#ADD ./Burrow /opt/Burrow/
-#ADD ./setup.sh /go/src/setup.sh 
-#RUN chmod u+x /go/src/setup.sh
-#ADD ./rootCA.crt /go/src/rootCA.crt
-WORKDIR /go/src
-EXPOSE 5000
-RUN echo $PATH
-RUN go get -u github.com/golang/dep/cmd/dep
-RUN go get -u github.com/kunjaiswal/Burrow
+ENV DEP_VERSION="0.5.0"
+RUN apk add --no-cache git curl gcc libc-dev && \
+	curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 -o $GOPATH/bin/dep && \
+	chmod +x $GOPATH/bin/dep && \
+	mkdir -p $GOPATH/src/github.com/kunjaiswal/Burrow
+
+ADD . $GOPATH/src/github.com/kunjaiswal/Burrow
 RUN cd $GOPATH/src/github.com/kunjaiswal/Burrow && \
 	dep ensure && \
-               	
-	go build
-RUN cd $GOPATH/src/github.com/kunjaiswal/Burrow && \
-    mv Burrow $GOPATH/src/
-RUN cd $GOPATH/src/github.com/kunjaiswal/Burrow && \
-    mv kafka-config/burrow.toml $GOPATH/src/
-RUN cd $GOPATH/src/github.com/kunjaiswal/Burrow && \
-    mv kafka-config/setup.sh $GOPATH/src/
-RUN chmod u+x /go/src/setup.sh  StatusNotFound StatusConstant = 0
-RUN echo "source /go/src/setup.sh" > /go/src/.bashrc
+	go build -o /tmp/burrow .
 
-CMD ["Burrow","--config-dir","."]
+FROM iron/go
+LABEL maintainer="LinkedIn Burrow https://github.com/kunjaiswal/Burrow"
+
+WORKDIR /app
+COPY --from=builder /tmp/burrow /app/
+ADD /kafka-config/burrow.toml /etc/burrow/
+
+#CMD ["/app/burrow", "--config-dir", "/etc/burrow"]
+CMD ["burrow"]
