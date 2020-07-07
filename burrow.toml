@@ -57,8 +57,6 @@ expire-group=604800
 zookeeper-interval=60
 zk-group-refresh=300
 
-
-
 [notifier.default]
 class-name="email"
 interval=60
