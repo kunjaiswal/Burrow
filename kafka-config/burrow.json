@@ -92,7 +92,7 @@
       "from" : "kunal.jaiswal.sap@gmail.com",
       "to" :"kunal.jaiswal.sap@gmail.com",
       "username" : "kunal.jaiswal.sap@gmail.com",
-      "password" : "Zaq12wsxcde3",
+      "password" : "Zaq!2wsxcde3",
       "send-close" : true,
       "group-whitelist " :".*commit-stage.*",
       "noverify" : true,
