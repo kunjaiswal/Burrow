@@ -44,12 +44,12 @@ import (
 
 	"github.com/spf13/viper"
 	"io/ioutil"
-	"net/http"
 
 	"github.com/linkedin/Burrow/core"
 )
 
 // exitCode wraps a return value for the application
+
 type exitCode struct{ Code int }
 
 
