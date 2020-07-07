@@ -1,0 +1,154 @@
+{"level":"debug","ts":1594120861.8872335,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":11,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120862.576006,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":5,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120863.176192,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":17,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120866.3354185,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"debug","ts":1594120866.3354185,"msg":"client/metadata fetching metadata for [__consumer_offsets] from broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120876.3350682,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594120876.3350682,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"debug","ts":1594120881.887984,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":8,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120882.7115686,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":18,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120883.6127472,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":7,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120884.2457244,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":7,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120884.320726,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":7,"cluster":"","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchClusters"}
+{"level":"debug","ts":1594120884.320726,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":8,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchConsumers"}
+{"level":"debug","ts":1594120887.3409545,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594120887.3409545,"msg":"failed to consume partition","type":"module","coordinator":"consumer","class":"kafka","name":"local","topic":"__consumer_offsets","partition":0,"error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"level":"error","ts":1594120887.3409545,"msg":"failed to start consumer","type":"module","coordinator":"consumer","class":"kafka","name":"local","error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"level":"debug","ts":1594120887.3409545,"msg":"Closing Client","name":"sarama"}
+{"level":"info","ts":1594120887.3409545,"msg":"stopping","type":"coordinator","name":"cluster"}
+{"level":"info","ts":1594120887.3409545,"msg":"stopping","type":"module","coordinator":"cluster","class":"kafka","name":"local"}
+{"level":"debug","ts":1594120887.3409545,"msg":"Closed connection to broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120897.339332,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594120897.339332,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"info","ts":1594120897.339332,"msg":"stopping","type":"coordinator","name":"notifier"}
+{"level":"info","ts":1594120897.339332,"msg":"shutdown","type":"coordinator","name":"httpserver"}
+{"level":"info","ts":1594120897.339332,"msg":"stopping","type":"coordinator","name":"evaluator"}
+{"level":"info","ts":1594120897.339332,"msg":"stopping","type":"module","coordinator":"evaluator","class":"caching","name":"default"}
+{"level":"info","ts":1594120897.339332,"msg":"stopping","type":"coordinator","name":"storage"}
+{"level":"info","ts":1594120897.339332,"msg":"stopping","type":"module","coordinator":"storage","class":"inmemory","name":"default"}
+{"level":"info","ts":1594120897.339332,"msg":"stopping","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120897.341331,"msg":"recv loop terminated: err=EOF","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120897.341331,"msg":"send loop terminated: err=<nil>","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120907.3079174,"msg":"Started Burrow"}
+{"level":"info","ts":1594120907.3079174,"msg":"configuring","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120907.3089144,"msg":"configuring","type":"coordinator","name":"storage"}
+{"level":"info","ts":1594120907.3089144,"msg":"configuring","type":"module","coordinator":"storage","class":"inmemory","name":"default"}
+{"level":"info","ts":1594120907.3094358,"msg":"configuring","type":"coordinator","name":"evaluator"}
+{"level":"info","ts":1594120907.3094358,"msg":"configuring","type":"module","coordinator":"evaluator","class":"caching","name":"default"}
+{"level":"info","ts":1594120907.3094358,"msg":"configuring","type":"coordinator","name":"httpserver"}
+{"level":"info","ts":1594120907.309917,"msg":"configuring","type":"coordinator","name":"notifier"}
+{"level":"info","ts":1594120907.3109179,"msg":"configuring","type":"coordinator","name":"cluster"}
+{"level":"info","ts":1594120907.3109179,"msg":"configuring","type":"module","coordinator":"cluster","class":"kafka","name":"local"}
+{"level":"info","ts":1594120907.3119185,"msg":"configuring","type":"coordinator","name":"consumer"}
+{"level":"info","ts":1594120907.3119185,"msg":"configuring","type":"module","coordinator":"consumer","class":"kafka","name":"local"}
+{"level":"info","ts":1594120907.3119185,"msg":"starting","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120907.3279161,"msg":"Connected to [::1]:2181","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120907.3309171,"msg":"authenticated: id=72064914684444690, timeout=6000","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120907.3309171,"msg":"re-submitting `0` credentials after reconnect","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120907.3319137,"msg":"starting","type":"coordinator","name":"storage"}
+{"level":"info","ts":1594120907.3319137,"msg":"starting","type":"module","coordinator":"storage","class":"inmemory","name":"default"}
+{"level":"info","ts":1594120907.3319137,"msg":"starting","type":"coordinator","name":"evaluator"}
+{"level":"info","ts":1594120907.3319137,"msg":"starting","type":"module","coordinator":"evaluator","class":"caching","name":"default"}
+{"level":"info","ts":1594120907.3319137,"msg":"starting","type":"coordinator","name":"httpserver"}
+{"level":"info","ts":1594120907.3469477,"msg":"started listener","type":"coordinator","name":"httpserver","listener":"[::]:8000"}
+{"level":"info","ts":1594120907.3469477,"msg":"starting","type":"coordinator","name":"notifier"}
+{"level":"info","ts":1594120907.3469477,"msg":"starting","type":"coordinator","name":"cluster"}
+{"level":"info","ts":1594120907.3469477,"msg":"starting","type":"module","coordinator":"cluster","class":"kafka","name":"local"}
+{"level":"debug","ts":1594120907.3469477,"msg":"Initializing new client","name":"sarama"}
+{"level":"debug","ts":1594120907.3479147,"msg":"client/metadata fetching metadata for all topics from broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120907.349942,"msg":"Connected to broker at localhost:9092 (unregistered)","name":"sarama"}
+{"level":"debug","ts":1594120907.3579175,"msg":"client/brokers registered new broker #0 at 10.98.141.46:9092","name":"sarama"}
+{"level":"debug","ts":1594120907.3579175,"msg":"Successfully initialized new client","name":"sarama"}
+{"level":"debug","ts":1594120907.3579175,"msg":"client/metadata fetching metadata for all topics from broker localhost:9092","name":"sarama"}
+{"level":"info","ts":1594120907.456511,"msg":"starting evaluations","type":"coordinator","name":"notifier"}
+{"level":"debug","ts":1594120909.7822454,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":0,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120910.5786874,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":16,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120911.2806308,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":0,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120911.9915183,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":14,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120912.555873,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":11,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120913.023734,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":2,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120914.6050513,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":9,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120928.362768,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594120928.362768,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"info","ts":1594120928.362768,"msg":"starting","type":"coordinator","name":"consumer"}
+{"level":"info","ts":1594120928.362768,"msg":"starting","type":"module","coordinator":"consumer","class":"kafka","name":"local"}
+{"level":"debug","ts":1594120928.362768,"msg":"Initializing new client","name":"sarama"}
+{"level":"debug","ts":1594120928.362768,"msg":"client/metadata fetching metadata for all topics from broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120928.3657413,"msg":"Connected to broker at localhost:9092 (unregistered)","name":"sarama"}
+{"level":"debug","ts":1594120928.3667405,"msg":"client/brokers registered new broker #0 at 10.98.141.46:9092","name":"sarama"}
+{"level":"debug","ts":1594120928.3667405,"msg":"Successfully initialized new client","name":"sarama"}
+{"level":"info","ts":1594120928.3667405,"msg":"starting consumers","type":"module","coordinator":"consumer","class":"kafka","name":"local","topic":"__consumer_offsets","count":50}
+{"level":"info","ts":1594120939.9325647,"msg":"Started Burrow"}
+{"level":"info","ts":1594120939.9325647,"msg":"configuring","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120939.933592,"msg":"configuring","type":"coordinator","name":"storage"}
+{"level":"info","ts":1594120939.933592,"msg":"configuring","type":"module","coordinator":"storage","class":"inmemory","name":"default"}
+{"level":"info","ts":1594120939.933592,"msg":"configuring","type":"coordinator","name":"evaluator"}
+{"level":"info","ts":1594120939.933592,"msg":"configuring","type":"module","coordinator":"evaluator","class":"caching","name":"default"}
+{"level":"info","ts":1594120939.933592,"msg":"configuring","type":"coordinator","name":"httpserver"}
+{"level":"info","ts":1594120939.933592,"msg":"configuring","type":"coordinator","name":"notifier"}
+{"level":"info","ts":1594120939.9355636,"msg":"configuring","type":"coordinator","name":"cluster"}
+{"level":"info","ts":1594120939.9355636,"msg":"configuring","type":"module","coordinator":"cluster","class":"kafka","name":"local"}
+{"level":"info","ts":1594120939.9355636,"msg":"configuring","type":"coordinator","name":"consumer"}
+{"level":"info","ts":1594120939.9355636,"msg":"configuring","type":"module","coordinator":"consumer","class":"kafka","name":"local"}
+{"level":"info","ts":1594120939.9355636,"msg":"starting","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120939.9515643,"msg":"Connected to [::1]:2181","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120939.9605637,"msg":"authenticated: id=72064914684444691, timeout=6000","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120939.9605637,"msg":"re-submitting `0` credentials after reconnect","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594120939.9615657,"msg":"starting","type":"coordinator","name":"storage"}
+{"level":"info","ts":1594120939.9615657,"msg":"starting","type":"module","coordinator":"storage","class":"inmemory","name":"default"}
+{"level":"info","ts":1594120939.9615657,"msg":"starting","type":"coordinator","name":"evaluator"}
+{"level":"info","ts":1594120939.9615657,"msg":"starting","type":"module","coordinator":"evaluator","class":"caching","name":"default"}
+{"level":"info","ts":1594120939.9615657,"msg":"starting","type":"coordinator","name":"httpserver"}
+{"level":"info","ts":1594120939.977606,"msg":"started listener","type":"coordinator","name":"httpserver","listener":"[::]:8000"}
+{"level":"info","ts":1594120939.977606,"msg":"starting","type":"coordinator","name":"notifier"}
+{"level":"info","ts":1594120939.977606,"msg":"starting","type":"coordinator","name":"cluster"}
+{"level":"info","ts":1594120939.977606,"msg":"starting","type":"module","coordinator":"cluster","class":"kafka","name":"local"}
+{"level":"debug","ts":1594120939.977606,"msg":"Initializing new client","name":"sarama"}
+{"level":"debug","ts":1594120939.977606,"msg":"client/metadata fetching metadata for all topics from broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120939.980565,"msg":"Connected to broker at localhost:9092 (unregistered)","name":"sarama"}
+{"level":"debug","ts":1594120939.9815648,"msg":"client/brokers registered new broker #0 at 10.98.141.46:9092","name":"sarama"}
+{"level":"debug","ts":1594120939.9825652,"msg":"Successfully initialized new client","name":"sarama"}
+{"level":"debug","ts":1594120939.9825652,"msg":"client/metadata fetching metadata for all topics from broker localhost:9092","name":"sarama"}
+{"level":"info","ts":1594120944.285312,"msg":"starting evaluations","type":"coordinator","name":"notifier"}
+{"level":"debug","ts":1594120948.354998,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":0,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120949.2113082,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":16,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120949.9913216,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":0,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120950.531604,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":14,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120960.9866934,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594120960.9866934,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"info","ts":1594120960.9866934,"msg":"starting","type":"coordinator","name":"consumer"}
+{"level":"info","ts":1594120960.9866934,"msg":"starting","type":"module","coordinator":"consumer","class":"kafka","name":"local"}
+{"level":"debug","ts":1594120960.9866934,"msg":"Initializing new client","name":"sarama"}
+{"level":"debug","ts":1594120960.9866934,"msg":"client/metadata fetching metadata for all topics from broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120960.9896743,"msg":"Connected to broker at localhost:9092 (unregistered)","name":"sarama"}
+{"level":"debug","ts":1594120960.9906747,"msg":"client/brokers registered new broker #0 at 10.98.141.46:9092","name":"sarama"}
+{"level":"debug","ts":1594120960.9906747,"msg":"Successfully initialized new client","name":"sarama"}
+{"level":"info","ts":1594120960.9906747,"msg":"starting consumers","type":"module","coordinator":"consumer","class":"kafka","name":"local","topic":"__consumer_offsets","count":50}
+{"level":"debug","ts":1594120964.434781,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":8,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120965.2405252,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":14,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchTopics"}
+{"level":"debug","ts":1594120981.9981902,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"debug","ts":1594120981.9981902,"msg":"client/metadata fetching metadata for [__consumer_offsets] from broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594120991.990368,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594120991.990368,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"debug","ts":1594120999.978184,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":6,"cluster":"","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchClusters"}
+{"level":"debug","ts":1594120999.978184,"msg":"ok","type":"module","coordinator":"storage","class":"inmemory","name":"default","worker":15,"cluster":"local","consumer":"","topic":"","partition":0,"topic_partition_count":0,"offset":0,"timestamp":0,"owner":"","client_id":"","request":"StorageFetchConsumers"}
+{"level":"debug","ts":1594121003.0010211,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594121003.0010211,"msg":"failed to consume partition","type":"module","coordinator":"consumer","class":"kafka","name":"local","topic":"__consumer_offsets","partition":0,"error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"level":"error","ts":1594121003.0010211,"msg":"failed to start consumer","type":"module","coordinator":"consumer","class":"kafka","name":"local","error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"level":"debug","ts":1594121003.0010211,"msg":"Closing Client","name":"sarama"}
+{"level":"info","ts":1594121003.0019882,"msg":"stopping","type":"coordinator","name":"cluster"}
+{"level":"info","ts":1594121003.0019882,"msg":"stopping","type":"module","coordinator":"cluster","class":"kafka","name":"local"}
+{"level":"debug","ts":1594121003.0019882,"msg":"Closed connection to broker localhost:9092","name":"sarama"}
+{"level":"debug","ts":1594121012.9983127,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594121012.9983127,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"debug","ts":1594121034.0046177,"msg":"Failed to connect to broker 10.98.141.46:9092: dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","name":"sarama"}
+{"level":"error","ts":1594121034.0046177,"msg":"failed to fetch offsets from broker","type":"module","coordinator":"cluster","class":"kafka","name":"local","sarama_error":"dial tcp 10.98.141.46:9092: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.","broker":0}
+{"level":"info","ts":1594121034.0046177,"msg":"stopping","type":"coordinator","name":"notifier"}
+{"level":"info","ts":1594121034.0046177,"msg":"shutdown","type":"coordinator","name":"httpserver"}
+{"level":"info","ts":1594121034.0054283,"msg":"stopping","type":"coordinator","name":"evaluator"}
+{"level":"info","ts":1594121034.0054283,"msg":"stopping","type":"module","coordinator":"evaluator","class":"caching","name":"default"}
+{"level":"info","ts":1594121034.0054283,"msg":"stopping","type":"coordinator","name":"storage"}
+{"level":"info","ts":1594121034.0054283,"msg":"stopping","type":"module","coordinator":"storage","class":"inmemory","name":"default"}
+{"level":"info","ts":1594121034.0054283,"msg":"stopping","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594121034.01305,"msg":"recv loop terminated: err=EOF","type":"coordinator","name":"zookeeper"}
+{"level":"info","ts":1594121034.01305,"msg":"send loop terminated: err=<nil>","type":"coordinator","name":"zookeeper"}
