@@ -14,6 +14,8 @@ level="debug"
 [client-profile.test]
 client-id="burrow-test"
 kafka-version="2.1.0"
+tls="tlsprofile"
+sasl="saslprofile"
 
 [zookeeper]
 servers=[ "10.254.20.10:2181", "10.254.20.11:2181", "10.254.20.12:2181" ]
@@ -69,7 +71,7 @@ username = "kunal.jaiswal.sap@gmail.com"
 password ="Zaq!2wsxcde3"
 send-close= true
 auth-type="plain"
-group-whitelist=".*commit-stage.*"
+group-whitelist="^.*commit-stage.*$"
 noverify=true
 url-open="config/deafault-http-post.tmpl"
 url-close="config/deafault-http-post.tmpl"
