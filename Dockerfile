@@ -1,7 +1,7 @@
 #this Dockerfile needs to be in folder where Burrow is present
 #->Burrow
 #->Dockerfile
-FROM golang:1.12-alpine
+FROM golang:1.14.4-alpine AS build
 MAINTAINER vishwanath.kulkarni@sap.com
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip

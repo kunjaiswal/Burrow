@@ -80,5 +80,7 @@ threshold=1
 group-whitelist=".*"
 group-blacklist="^not-this-group$"
 send-close=true
+url-open="config/deafault-http-post.tmpl"
+url-close="config/deafault-http-post.tmpl"
 template-open= "default-email.tmpl"
 template-close="default-email.tmpl"
