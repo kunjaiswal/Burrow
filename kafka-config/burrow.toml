@@ -51,7 +51,8 @@ workers=20
 intervals=15
 expire-group=604800
 min-distance=1
-
+min-distance=1
+group-whitelist=".*"
 
 [notifier.default]
 class-name="email"
@@ -65,9 +66,19 @@ username = "kunal.jaiswal.sap@gmail.com"
 password ="Zaq!2wsxcde3"
 send-close= true
 auth-type="plain"
-group-whitelist=""
+group-whitelist=".*"
 noverify=true
 url-open="config/deafault-http-post.tmpl"
 url-close="config/deafault-http-post.tmpl"
+template-open= "default-email.tmpl"
+template-close="default-email.tmpl"
+
+[notifier.mynotify]
+class-name="http"
+interval=30
+threshold=1
+group-whitelist=".*"
+group-blacklist="^not-this-group$"
+send-close=true
 template-open= "default-email.tmpl"
 template-close="default-email.tmpl"

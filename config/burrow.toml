@@ -75,5 +75,15 @@ username = "kunal.jaiswal.sap@gmail.com"
 password ="Zaq!2wsxcde3"
 send-close= true
 auth-type="plain"
-group-whitelist="^.*commit-stage.*$"
+group-whitelist=".*"
 noverify=true
+
+[notifier.mynotify]
+class-name="http"
+interval=30
+threshold=1
+group-whitelist=".*"
+group-blacklist="^not-this-group$"
+send-close=true
+template-open= "default-email.tmpl"
+template-close="default-email.tmpl"
