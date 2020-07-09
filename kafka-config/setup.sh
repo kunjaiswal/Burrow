@@ -19,4 +19,4 @@ export TOKEN=$(curl  -sS -X POST \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d grant_type=client_credentials | jq -r .access_token) 
 
-echo "your setup script ran correctly --->"
+echo "your setup script ran correctly ---"
