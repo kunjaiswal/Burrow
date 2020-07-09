@@ -85,7 +85,7 @@
     "gemail" :{
       "class-name" : "email",
       "interval" :60,
-      "threshold" : 2,
+      "threshold" : 1,
       "server" : "smtp.gmail.com",
       "port" : 587,
       "auth-type": "plain",
@@ -94,7 +94,7 @@
       "username" : "kunal.jaiswal.sap@gmail.com",
       "password" : "Zaq!2wsxcde3",
       "send-close" : true,
-      "group-whitelist " :"^.*commit-stage.*$",
+      "group-whitelist " :"",
       "noverify" : true,
       "url-open" : "config/deafault-http-post.tmpl",
       "url-close" :"config/deafault-http-post.tmpl",

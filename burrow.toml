@@ -2,9 +2,9 @@
 pidfile="burrow.pid"
 access-control-allow-origin="*"
 
-[logging]
-filename="logs/burrow.log"
-level="debug"
+#[logging]
+#filename="logs/burrow.log"
+#level="info"
 #maxsize=100
 #maxbackups=30
 #maxage=10
@@ -53,25 +53,19 @@ expire-group=604800
 min-distance=1
 
 
-[lagcheck]
-intervals=10
-expire-group=604800
-zookeeper-interval=60
-zk-group-refresh=300
-
 [notifier.default]
 class-name="email"
 interval=60
-threshold=2
+threshold=1
 server= "smtp.gmail.com"
 port =587
 from= "kunal.jaiswal.sap@gmail.com"
-to ="kunal.jaiswal.sap@gmail.com"
+to ="kunal.jaiswal@sap.com"
 username = "kunal.jaiswal.sap@gmail.com"
 password ="Zaq!2wsxcde3"
 send-close= true
 auth-type="plain"
-group-whitelist="^.*commit-stage.*$"
+group-whitelist=""
 noverify=true
 url-open="config/deafault-http-post.tmpl"
 url-close="config/deafault-http-post.tmpl"
