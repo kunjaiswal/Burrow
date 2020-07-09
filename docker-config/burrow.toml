@@ -51,7 +51,7 @@ workers=20
 intervals=15
 expire-group=604800
 min-distance=1
-
+group-whitelist=".*"
 
 [notifier.default]
 class-name="email"
