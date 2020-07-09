@@ -87,7 +87,7 @@
       "interval" :60,
       "threshold" : 1,
       "server" : "smtp.gmail.com",
-      "port" : 587,
+      "port" : 465,
       "auth-type": "plain",
       "from" : "kunal.jaiswal.sap@gmail.com",
       "to" :"kunal.jaiswal.sap@gmail.com",
