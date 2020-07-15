@@ -56,18 +56,19 @@ group-whitelist=".*"
 [notifier.default]
 class-name="email"
 interval=60
-threshold=1
+threshold=2
 server= "smtp.gmail.com"
-port =465
+port =587
 from= "kunal.jaiswal.sap@gmail.com"
-to ="kunal.jaiswal@sap.com"
+to ="kunal.jaiswal.sap@gmail.com"
 username = "kunal.jaiswal.sap@gmail.com"
 password ="Zaq!2wsxcde3"
 send-close= true
 auth-type="plain"
-group-whitelist=".*"
+group-whitelist="^.*commit-stage.*$"
 noverify=true
-url-open="config/deafault-http-post.tmpl"
-url-close="config/deafault-http-post.tmpl"
+url-open="config/default-http-post.tmpl"
+url-close="config/default-http-post.tmpl"
 template-open= "default-email.tmpl"
 template-close="default-email.tmpl"
+
