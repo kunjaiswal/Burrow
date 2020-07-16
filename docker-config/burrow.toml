@@ -51,18 +51,17 @@ workers=20
 intervals=15
 expire-group=604800
 min-distance=1
-group-whitelist=".*"
 
 [notifier.default]
 class-name="email"
 interval=60
 threshold=2
 server= "smtp.gmail.com"
-port =587
+port =465
 from= "kunal.jaiswal.sap@gmail.com"
 to ="kunal.jaiswal.sap@gmail.com"
 username = "kunal.jaiswal.sap@gmail.com"
-password ="Zaq!2wsxcde3"
+password ="Test@123"
 send-close= true
 auth-type="plain"
 group-whitelist="^.*commit-stage.*$"

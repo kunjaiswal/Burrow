@@ -9,6 +9,7 @@ NOTIFIER_SERVER= os.getenv("NOTIFIER_SERVER")
 NOTIFIER_THRESHOLD= os.getenv("NOTIFIER_THRESHOLD")
 NOTIFIER_TO= os.getenv("NOTIFIER_TO")
 NOTIFIER_USERNAME= os.getenv("NOTIFIER_USERNAME")
+NOTIFIER_PORT= os.getenv("NOTIFIER_PORT")
 
 
 vcap_services = os.environ['VCAP_SERVICES']
@@ -26,7 +27,7 @@ data_item['notifier']['default']['to'] =NOTIFIER_TO
 data_item['notifier']['default']['username'] =NOTIFIER_USERNAME
 data_item['notifier']['default']['password'] =NOTIFIER_PASSWORD
 data_item['notifier']['default']['group-whitelist'] =NOTIFIER_GROUP_WHITELIST
-
+data_item['notifier']['default']['port'] =NOTIFIER_PORT
 #with open('burrow.json') as data_file:
 #    data_item = json.load(data_file)
 #set zookeeper servers
